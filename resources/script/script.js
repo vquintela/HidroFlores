@@ -64,14 +64,14 @@ document.getElementById('oficios').addEventListener('click', e => {
     }
 })
 
-const galeriaImagenes = nombre => {
+const galeriaImagenes = async (nombre) => {
     document.querySelector('.title-galeria').innerText = nombre;
     document.querySelector('.modal-galeria').style.display = 'block';
     document.getElementById('cerrarModal').addEventListener('click', () => {
         document.querySelector('.modal-galeria').style.display = 'none';
     })
     let num = 1;
-    document.querySelector('.galeria-img').style.backgroundImage = `url(/resources/img/${nombre}/${num}.jpg)`
+    document.querySelector('.galeria-img').style.backgroundImage = `url(resources/img/${nombre}/${num}.jpg)`
     document.getElementById('btn-right').addEventListener('click', () => {
         suma()
     })
@@ -84,7 +84,7 @@ const galeriaImagenes = nombre => {
         } else {
             num ++;
         }
-        document.querySelector('.galeria-img').style.backgroundImage = `url(/resources/img/${nombre}/${num}.jpg)`
+        document.querySelector('.galeria-img').style.backgroundImage = `url(resources/img/${nombre}/${num}.jpg)`
     }
     const resta = () => {
         if(num <= 1) {
@@ -92,7 +92,7 @@ const galeriaImagenes = nombre => {
         } else {
             num --;
         }
-        document.querySelector('.galeria-img').style.backgroundImage = `url(/resources/img/${nombre}/${num}.jpg)`
+        document.querySelector('.galeria-img').style.backgroundImage = `url(resources/img/${nombre}/${num}.jpg)`
     }
 }
 
