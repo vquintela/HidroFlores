@@ -1,4 +1,4 @@
-// BTN RESPONSIE NABAR
+// BTN RESPONSIVE NAVBAR
 document.getElementById("btn-menu").addEventListener("click", () => {
     document.getElementById("navbar-nav").classList.toggle("show");
 });
@@ -56,6 +56,45 @@ document.getElementById('gal').addEventListener('click', e => {
     }
 })
 
+// GALERIA TRABAJOS Y OFICIOS
+document.getElementById('oficios').addEventListener('click', e => {
+    const names = ['bombas', 'piscinas', 'motores', 'instalaciones', 'tableros', 'turbinas', 'rowa', 'empresas'];
+    if(names.includes(e.target.parentElement.classList.value)) {
+        galeriaImagenes(e.target.parentElement.classList.value)
+    }
+})
+
+const galeriaImagenes = nombre => {
+    document.querySelector('.modal-galeria').style.display = 'block';
+    document.getElementById('cerrarModal').addEventListener('click', () => {
+        document.querySelector('.modal-galeria').style.display = 'none';
+    })
+    let num = 1;
+    document.querySelector('.galeria-img').style.backgroundImage = `url(/resources/img/${nombre}/${num}.jpg)`
+    document.getElementById('btn-right').addEventListener('click', () => {
+        suma()
+    })
+    document.getElementById('btn-left').addEventListener('click', () => {
+        resta()
+    })
+    const suma = () => {
+        if(num >= 3) {
+            num = 1
+        } else {
+            num ++;
+        }
+        document.querySelector('.galeria-img').style.backgroundImage = `url(/resources/img/${nombre}/${num}.jpg)`
+    }
+    const resta = () => {
+        if(num <= 1) {
+            num = 3
+        } else {
+            num --;
+        }
+        document.querySelector('.galeria-img').style.backgroundImage = `url(/resources/img/${nombre}/${num}.jpg)`
+    }
+}
+
 // BTN WHATSAPP
 window.onload = () => {
     let check = false;
@@ -79,6 +118,7 @@ document.getElementById('btn-mensaje').addEventListener('click', e => {
     validar()
 })
 
+// FORMULARIO CONTACTO
 const validar = () => {
     const formData = new FormData();
     const nombre = document.getElementById('nombre').value;

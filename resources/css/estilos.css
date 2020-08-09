@@ -409,7 +409,8 @@ ul {
 }
 
 /*Modal fade*/
-.mascara {
+.mascara,
+.modal-galeria {
     display: none; 
     position: fixed; 
     z-index: 100000; 
@@ -419,9 +420,9 @@ ul {
     height: 100vh; 
     background-color: rgba(0,0,0,0.8); 
 }
-.contenido {
+.contenido,
+.modal-galeria-contenido {
     position: fixed;
-    top: 15vh;
     left: 10vw;
     right: 10vw;
     background-color: #fefefe;
@@ -429,18 +430,24 @@ ul {
     padding: 20px;
     border: 1px solid #888;
     width: auto;
-    max-width: 450px;
     color: black;
     animation: modal 1s;
 }
 
-.modal-title {
+.contenido {
+    top: 15vh;
+    max-width: 450px;
+}
+
+.modal-title,
+.modal-galeria-title {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
 }
 
-.modal-title img {
+.modal-title img,
+.modal-galeria-title img {
     width: 70px;
 }
 
@@ -461,6 +468,73 @@ ul {
     background-color: #169FDB;
     color: white;
     cursor: pointer;
+}
+
+/* MODAL GALERIA */
+.modal-galeria-contenido {
+    top: 5vh;
+}
+
+.modal-galeria-title {
+    text-transform: uppercase;
+}
+
+.cerrar {
+    color: #aaaaaa;
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: auto;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-galeria-body {
+    width: 90%;
+    height: 350px;
+    display: flex;
+    margin: 15px auto;
+    align-items: center;
+}
+
+.modal-galeria-body i {
+    font-size: 3rem;
+    color: #2f3640;
+}
+
+.modal-galeria-body i:hover {
+    color: #fefefe;
+    cursor: pointer;
+}
+
+.modal-galeria-body i:first-child {
+    transform: translateX(120%);
+}
+
+.modal-galeria-body i:last-child {
+    transform: translateX(-120%);
+}
+
+.galeria-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.modal-galeria-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-galeria-footer img {
+    margin-top: 15px;
+    max-width: 40%;
 }
 
 @keyframes modal {
@@ -580,6 +654,14 @@ ul {
     }
     .slide {
         height: 20vh;
+    }
+    .modal-galeria-contenido {
+        left: 5vw;
+        right: 5vw;
+    }
+    .modal-galeria-body {
+        margin: 15px 0;
+        width: 100%;
     }
 }
 
