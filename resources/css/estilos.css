@@ -479,6 +479,10 @@ ul {
     text-transform: uppercase;
 }
 
+.title-galeria {
+    text-transform: capitalize;
+}
+
 .cerrar {
     color: #aaaaaa;
     font-size: 28px;

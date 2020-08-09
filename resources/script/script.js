@@ -65,6 +65,7 @@ document.getElementById('oficios').addEventListener('click', e => {
 })
 
 const galeriaImagenes = nombre => {
+    document.querySelector('.title-galeria').innerText = nombre;
     document.querySelector('.modal-galeria').style.display = 'block';
     document.getElementById('cerrarModal').addEventListener('click', () => {
         document.querySelector('.modal-galeria').style.display = 'none';
