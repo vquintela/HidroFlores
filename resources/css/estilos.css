@@ -41,7 +41,7 @@ ul {
 
 /*NAVBAR*/
 .contenedor-color {
-    background-color: rgba(47, 54, 64, 0.8)
+    background-color: rgba(47, 54, 64, 0.9)
 }
 
 .contenedor-nav {
@@ -273,9 +273,9 @@ ul {
     justify-content:  center;
 }
 
-.titulo h3 {
+.titulo h2 {
     padding: 25px 15px;
-    font-size: calc(1em + 1vw);
+    font-size: 1.8rem;
 }
 
 .col-grid p {
@@ -581,6 +581,9 @@ ul {
 
     .logoCont {
         display: flex;
+    }
+    .modal-galeria-body i:hover {
+        color: #fefefe;
     }
 }
 
