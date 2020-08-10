@@ -164,6 +164,7 @@ ul {
 
 .img-sec img {
     max-width: 30%;
+    cursor: pointer;
 }
 
 .img-sec .activ {
@@ -211,18 +212,21 @@ ul {
 
 .oficios img {
     width: 60%;
+    cursor: pointer;
 }
   
 .oficios h3 {
     font-size: 20px;
     margin: 10px 0;
     color: #222021;
+    cursor: pointer;
 }
   
 .oficios p {
     padding: 10px 0;
     color: #222021;
     display: inline-block;
+    cursor: pointer;
 }
 
 /* SLIDER */
