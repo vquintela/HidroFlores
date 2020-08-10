@@ -290,7 +290,6 @@ ul {
 }
 
 .redes a {
-    padding-right: 20px;
     text-decoration: none;
 }
 
@@ -507,11 +506,11 @@ ul {
 
 .modal-galeria-body i {
     font-size: 3rem;
-    color: #2f3640;
+    color: #fefefe;
 }
 
 .modal-galeria-body i:hover {
-    color: #fefefe;
+    color: #2f3640;
     cursor: pointer;
 }
 
